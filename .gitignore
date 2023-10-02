@@ -8,7 +8,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-/[Pp]ackages/PICO Unity Integration SDK-[0-9][0-9][0-9]
+/[Pp]ackages/PICO Unity Integration SDK [0-9][0-9][0-9]
 
 #再配布が禁止されているものや規約が不明瞭なものはRedistributionProhibitedフォルダを作成しそこに配置する
 #元の配布元や販売元のURLを記述しておくのを忘れずに
