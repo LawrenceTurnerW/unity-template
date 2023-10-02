@@ -8,7 +8,9 @@ git@github.com:LawrenceTurnerW/~~~.git
 ローカルにmainブランチを作成して--set-upstream-to でつなげる
 git branch --set-upstream-to=origin/main main
 
-ローカルのgitignoreを消す
+initした際にできるgitignoreがコンフリクトしないようにローカルのgitignoreを消してcommit
+git rm .gitignore
+git commit -m "gitignoreを削除"
 
 ローカルにマージする
 git merge --allow-unrelated-histories origin/main
