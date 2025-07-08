@@ -8,20 +8,24 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-/[Pp]ackages/PICO Unity Integration SDK [0-9][0-9][0-9]
 
-#OculusIntegrationを使用する場合の除外フォルダを追加
-/[Aa]ssets/Oculus/
+# リポジトリをPublicにすることが多いのでAssets 以下は全て除外
+Assets/*
+# ただし MyAssets フォルダは除外しない（追跡する）
+!Assets/MyAssets/
+!Assets/MyAssets/**
 
-#再配布が禁止されているものや規約が不明瞭なものはRedistributionProhibitedフォルダを作成しそこに配置する
-#元の配布元や販売元のURLを記述しておくのを忘れずに
-/[Aa]ssets/RedistributionProhibited/
+# Unityクラウドビルドなどのキャッシュ
+sysinfo.txt
 
-# アセットストアツールプラグインを無視したい場合は、この行のコメントを解除
-# /[Aa]ssets/AssetStoreTools*
-
-# Visual Studio のキャッシュディレクトリ
+# IDE 関連（VS / Rider）
 .vs/
+.vscode/
+.idea/
+*.code-workspace
+
+# Rider files
+*.sln.iml
 
 # 自動生成された VS/MD/Consulo ソリューションおよびプロジェクト ファイル
 ExportedObj/
@@ -67,10 +71,3 @@ crashlytics-build.properties
 
 # Recordings can get excessive in size
 /[Rr]ecordings/
-
-# Packed Addressables
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
-
-# Temporary auto-generated Android Assets
-/[Aa]ssets/[Ss]treamingAssets/aa.meta
-/[Aa]ssets/[Ss]treamingAssets/aa/*
